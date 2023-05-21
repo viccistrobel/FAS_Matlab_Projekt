@@ -1,7 +1,6 @@
-function [ay_lin,dH_lin] = gesteuerte_kreisfahrt(L, v, EG, iS)
-%GESTEUERTE_KREISFAHRT Summary of this function goes here
-%   Detailed explanation goes here
-ay_lin = linspace(0, 10, 100);
-dH_lin = ay_lin * (L / v^2 + EG) * iS * 180 / pi;
+function dH_lin = gesteuerte_kreisfahrt(ay, L, v, EG, iS)
+%GESTEUERTE_KREISFAHRT Berechnet den Verlauf des Lenkradwinkels für das
+%linare Einspurmodell für eine Kreisfahrt mit konstanter Geschwindigkeit
+dH_lin = ay * (L / v^2 + EG) * iS * 180 / pi;
 end
 
